@@ -15,26 +15,51 @@
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    />
+
     <link rel="stylesheet" href="./index.css" />
     <title>My Recipe Book</title>
   </head>
   <body>
     <header>
-      <h1 class="text-center">👩‍🍳 My Recipe Book</h1>
+      <i class="fa fa-camera-retro fa-3x"></i>
+      <h1 class="text-center">My Recipe Book</h1>
       <h3 class="text-center">
         Collect and organize your favorite recipes. You can also consult our
         Chef AI to help you concoct a simple recipe based on your available
         ingredients at home. 🤓
       </h3>
     </header>
-    <section class="recipe_option">
+    <div class="recipe_option">
       <input
         class="recipe_search border border-secondary-subtle"
         type="text"
         id="searchInput"
         placeholder="Search recipes..."
       />
-      <button id="addRecipeButton" class="add_recipe_button">Add recipe</button>
-    </section>
+      <button class="addRecipeButton">Add recipe</button>
+    </div>
+    <div class="recipe_generator">
+      <form id="recipe_generator">
+        <input
+          type="text"
+          placeholder="Enter your ingredients or search for Recipes..."
+          autofocus
+          required
+          autocomplete="off"
+          class="input_element"
+          id="user_instruction"
+        />
+        <input type="submit" class="submit_button" />
+      </form>
+      <div class="hint">
+        i.e. Mushroom, Prawns, or Rainbow cake, Christmas cookies
+      </div>
+    </div>
+
+    <div class="recipe hidden" id="recipe"></div>
   </body>
 </html>

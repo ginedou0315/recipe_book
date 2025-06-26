@@ -5,9 +5,49 @@ body {
   background: rgb(222, 196, 222);
   padding: 20px;
   margin: 20px;
-  border: solid rgb(96, 9, 75);
+}
+header {
+  border: solid #3b1e54;
   border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 30px;
+  background: antiquewhite;
 }
 .recipe_option {
   text-align: center;
+}
+.recipe_generator {
+  margin-top: 20px;
+  padding-top: 40px;
+}
+.input_element {
+  padding: 16px;
+  border: 1px solid #3b1e54;
+  width: 80%;
+  font-size: 16px;
+  border-radius: 20px;
+  line-height: 20px;
+  color: #3b1e54;
+}
+.submit_button {
+  margin-left: 10px;
+  background: plum;
+  color: #3b1e54;
+  border: none;
+  width: 150px;
+  font-size: 16px;
+  border-radius: 50px;
+  padding: 5px;
+}
+.recipe {
+  font-size: 16px;
+  background-image: url("https://media.istockphoto.com/id/1902778637/photo/vintage-graph-paper-background.jpg?s=612x612&w=0&k=20&c=BM-K5pUZh8yGhx34YAKs8IlDix22LEF7F-TOJNnAgTU=");
+  color: #141411;
+  padding: 20px;
+  line-height: 2;
+  border-left: 3px solid rgb(36, 23, 65);
+  box-shadow: 0px 4px 30px 0px rgb(214, 109, 214);
+}
+.hidden {
+  display: none;
 }
