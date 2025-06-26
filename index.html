@@ -3,6 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&family=Dancing+Script:wght@400..700&family=Delius&family=Fleur+De+Leah&family=Great+Vibes&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Indie+Flower&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lexend:wght@100..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Molengo&family=Noto+Znamenny+Musical+Notation&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Source+Code+Pro:ital,wght@1,300&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
@@ -18,16 +24,17 @@
       <h3 class="text-center">
         Collect and organize your favorite recipes. You can also consult our
         Chef AI to help you concoct a simple recipe based on your available
-        ingredients at home. :)
+        ingredients at home. 🤓
       </h3>
     </header>
-    <div>
+    <section class="recipe_option">
       <input
         class="recipe_search border border-secondary-subtle"
         type="text"
         id="searchInput"
         placeholder="Search recipes..."
       />
-    </div>
+      <button id="addRecipeButton" class="add_recipe_button">Add recipe</button>
+    </section>
   </body>
 </html>

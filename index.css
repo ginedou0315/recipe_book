@@ -1,8 +1,13 @@
 body {
-  font-family: Georgia, "Times New Roman", Times, serif;
-  background: plum;
+  font-family: "Delius", cursive;
+  font-weight: 400;
+  font-style: normal;
+  background: rgb(222, 196, 222);
   padding: 20px;
   margin: 20px;
-  border: solid black;
+  border: solid rgb(96, 9, 75);
   border-radius: 5px;
+}
+.recipe_option {
+  text-align: center;
 }
