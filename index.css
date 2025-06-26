@@ -7,18 +7,30 @@ body {
   margin: 20px;
 }
 header {
-  border: solid #3b1e54;
-  border-radius: 5px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: none;
+  border-radius: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
   padding: 20px;
   margin-bottom: 30px;
   background: antiquewhite;
 }
-.recipe_option {
-  text-align: center;
+header:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
+
 .recipe_generator {
   margin-top: 20px;
   padding-top: 40px;
+}
+#addRecipeButton {
+  max-width: 100%;
+  border-radius: 5px;
+  background: red;
+  padding: 20px;
+  margin-left: 30px;
+  text-align: center;
 }
 .input_element {
   padding: 16px;
@@ -39,9 +51,13 @@ header {
   border-radius: 50px;
   padding: 5px;
 }
+.ai_recipe_container {
+  border: solid black;
+  margin-top: 30px;
+}
 .recipe {
   font-size: 16px;
-  background-image: url("https://media.istockphoto.com/id/1902778637/photo/vintage-graph-paper-background.jpg?s=612x612&w=0&k=20&c=BM-K5pUZh8yGhx34YAKs8IlDix22LEF7F-TOJNnAgTU=");
+  background-image: url("visuals/recipe\ note\ pad2.jpg");
   color: #141411;
   padding: 20px;
   line-height: 2;
@@ -50,4 +66,18 @@ header {
 }
 .hidden {
   display: none;
+}
+
+.generating {
+  animation: blink-animation 1s steps(5, start) infinite;
+}
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
 }
