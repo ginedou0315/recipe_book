@@ -65,10 +65,10 @@ document.addEventListener("DOMContentLoaded", () => {
         <h5 class="card-title">${recipe.title}</h5>
         <p><strong>Ingredients:</strong><br>${recipe.ingredients}</p>
         <p><strong>Instructions:</strong><br>${recipe.instructions}</p>
-        <div class="d-flex justify-content-between mt-3">
-          <button class="btn btn-sm btn-warning edit-btn">Edit</button>
-          <button class="btn btn-sm btn-danger delete-btn">Delete</button>
-        </div>
+       <div class="d-flex justify-content-between mt-3">
+  <button class="btn btn-sm btn-warning edit-btn">Edit</button>
+  <button class="btn btn-sm btn-danger delete-btn">Delete</button>
+</div>
       </div>
     `;
 
