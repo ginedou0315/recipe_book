@@ -56,11 +56,14 @@ document.addEventListener("DOMContentLoaded", () => {
     cardWrapper.style.width = "18rem";
 
     cardWrapper.innerHTML = `
-      ${
-        recipe.image
-          ? `<img src="${recipe.image}" class="card-img-top" alt="${recipe.title}">`
-          : ""
-      }
+    ${
+      recipe.image
+        ? `
+      <a href="${recipe.image}" target="_blank" rel="noopener noreferrer">
+        <img src="${recipe.image}" class="card-img-top" alt="${recipe.title}">
+      </a>`
+        : ""
+    }
       <div class="card-body">
         <h5 class="card-title">${recipe.title}</h5>
         <p><strong>Ingredients:</strong><br>${recipe.ingredients}</p>
