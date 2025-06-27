@@ -1,94 +1,141 @@
+/* === Base Reset === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Delius", cursive;
-  font-weight: 400;
-  font-style: normal;
   background: rgb(222, 196, 222);
+  color: #3b1e54;
   padding: 20px;
-  margin: 20px;
 }
+
+/* === Header === */
 header {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  border: none;
-  border-radius: 8px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  padding: 20px;
-  margin-bottom: 30px;
   background: antiquewhite;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin-bottom: 30px;
+  text-align: center;
 }
+
 header:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-.recipe_generator {
-  margin-top: 20px;
-  padding-top: 40px;
+/* === Layout Containers === */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
+
+/* === Search + Add Buttons === */
+.recipe_option {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  align-items: stretch;
+  margin-bottom: 20px;
+}
+
+.recipe_option input,
+.recipe_option button {
+  flex: 1 1 250px;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
 #addRecipeButton {
-  max-width: 100%;
-  border-radius: 5px;
   background: red;
-  padding: 20px;
-  margin-left: 30px;
-  text-align: center;
+  color: white;
+  border: none;
+  min-width: 140px;
+  cursor: pointer;
 }
+
+#addRecipeButton:hover {
+  background: darkred;
+}
+
+/* === Quick Add List === */
+#recipeList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#recipeList .card {
+  flex: 1 1 300px;
+  max-width: 100%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* === AI Recipe Generator === */
+.ai_recipe_container {
+  margin-top: 40px;
+  padding: 20px;
+  border: 2px dashed #3b1e54;
+  border-radius: 10px;
+  background: #fff;
+}
+
 .input_element {
+  width: 100%;
   padding: 16px;
-  border: 1px solid #3b1e54;
-  width: 80%;
   font-size: 16px;
   border-radius: 20px;
-  line-height: 20px;
-  color: #3b1e54;
+  border: 1px solid #3b1e54;
+  margin-bottom: 10px;
 }
+
 .submit_button {
-  margin-left: 10px;
   background: plum;
   color: #3b1e54;
   border: none;
-  width: 150px;
+  padding: 10px 20px;
   font-size: 16px;
   border-radius: 50px;
-  padding: 5px;
+  cursor: pointer;
 }
-.ai_recipe_container {
-  border: solid black;
-  margin-top: 30px;
+
+.hint {
+  font-size: 14px;
+  margin-top: 10px;
+  color: #555;
 }
+
+/* === Recipe List === */
 .recipe {
   font-size: 16px;
-  background-image: url("visuals/recipe\ note\ pad2.jpg");
+  background-image: url("visuals/recipe note pad2.jpg");
+  background-size: cover;
+  background-position: center;
   color: #141411;
   padding: 20px;
   line-height: 2;
   border-left: 3px solid rgb(36, 23, 65);
   box-shadow: 0px 4px 30px 0px rgb(214, 109, 214);
-}
-#recipeList {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.hidden {
-  display: none;
+  margin-top: 20px;
 }
 
-.generating {
-  animation: blink-animation 1s steps(5, start) infinite;
-}
-@keyframes blink-animation {
-  to {
-    visibility: hidden;
-  }
-}
-@-webkit-keyframes blink-animation {
-  to {
-    visibility: hidden;
-  }
-}
 .hidden {
   display: none !important;
 }
+
+/* === Overlay Form === */
 .overlay {
   position: fixed;
   top: 0;
@@ -118,9 +165,43 @@ header:hover {
   padding: 10px;
   border-radius: 6px;
   border: 1px solid #ccc;
+  font-size: 14px;
 }
 
 .form-buttons {
   display: flex;
   justify-content: space-between;
+}
+
+/* === Animation === */
+.generating {
+  animation: blink-animation 1s steps(5, start) infinite;
+}
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+
+/* === Responsive Tweaks === */
+@media screen and (max-width: 600px) {
+  .recipe_option {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .submit_button {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .input_element {
+    width: 100%;
+  }
+
+  .form-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
