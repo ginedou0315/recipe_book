@@ -7,19 +7,21 @@
 
 body {
   font-family: "Delius", cursive;
-  background: rgb(222, 196, 222);
+  background-image: url("https://images.pexels.com/photos/5208255/pexels-photo-5208255.jpeg");
+  background-size: cover;
   color: #3b1e54;
   padding: 20px;
 }
 
 /* === Header === */
 header {
-  background: antiquewhite;
-  padding: 20px;
+  background: rgb(70, 60, 47);
+  margin: 20px 30px;
+  padding: 20px 10px 20px 10px;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  margin-bottom: 30px;
+  color: rgb(199, 179, 211);
   text-align: center;
 }
 
