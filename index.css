@@ -17,7 +17,7 @@ body {
 header {
   background: rgb(70, 60, 47);
   margin: 20px 30px;
-  padding: 20px 10px 20px 10px;
+  padding: 40px 20px 20px 20px;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
