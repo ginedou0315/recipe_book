@@ -57,7 +57,7 @@ header:hover {
 }
 
 #addRecipeButton {
-  background: red;
+  background: #af4eaf;
   color: white;
   border: none;
   min-width: 140px;
@@ -65,7 +65,7 @@ header:hover {
 }
 
 #addRecipeButton:hover {
-  background: darkred;
+  background: darkmagenta;
 }
 
 /* === Quick Add List === */
@@ -116,32 +116,35 @@ header:hover {
   padding: 20px;
   border: 2px dashed #3b1e54;
   border-radius: 10px;
-  background: #fff;
+  background: #463c2f;
 }
 
 .input_element {
   width: 100%;
   padding: 16px;
   font-size: 16px;
-  border-radius: 20px;
+  border-radius: 8px;
   border: 1px solid #3b1e54;
   margin-bottom: 10px;
 }
 
 .submit_button {
-  background: plum;
-  color: #3b1e54;
+  background: #af4eaf;
+  color: #fff;
   border: none;
   padding: 10px 20px;
   font-size: 16px;
-  border-radius: 50px;
+  border-radius: 8px;
   cursor: pointer;
+}
+.submit_button:hover {
+  background: darkmagenta;
 }
 
 .hint {
   font-size: 14px;
   margin-top: 10px;
-  color: #555;
+  color: #fff;
 }
 
 /* === Recipe List === */
