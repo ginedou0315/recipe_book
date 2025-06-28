@@ -83,22 +83,27 @@ header:hover {
 .card-body {
   width: 100%;
   overflow-y: auto;
-  padding: 15px;
+  padding: 20px;
   box-sizing: border-box;
 }
 #recipeList .card {
   width: 100%;
   max-height: 400px;
   place-self: center;
-
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  margin: 0;
+  margin: 0 auto;
   background: white;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+#recipeList .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
 .card img {
   width: 100%;
   height: auto;
